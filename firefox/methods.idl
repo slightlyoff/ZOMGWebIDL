@@ -1,0 +1,905 @@
+[Constructor(DOMString name, optional DOMString message = "")]
+[Constructor(DOMString type, optional AnimationEventInit eventInitDict)]
+[Constructor(DOMString type, optional ClipboardEventInit eventInitDict)]
+[Constructor(DOMString type, optional CustomEventInit eventInitDict)]
+[Constructor(DOMString type, optional EventInit eventInitDict)]
+[Constructor(DOMString type, optional TransitionEventInit eventInitDict)]
+[Constructor(DOMString type, optional UIEventInit eventInitDict)]
+[Constructor(DOMString type, optional WheelEventInit eventInitDict)]
+[Constructor(DOMString typeArg, optional MouseEventInit mouseEventInitDict)]
+[Constructor(DOMString url, optional EventSourceInit eventSourceInitDict), PrefControlled]
+[Constructor(double startTime, double endTime, DOMString text),
+[Constructor(MutationCallback mutationCallback)]
+[Constructor(optional DOMString data = "")]
+[Constructor(optional DOMString data = "")]
+[Constructor(optional DOMString label = "utf-8", optional TextDecoderOptions options)]
+[Constructor(optional DOMString utfLabel = "utf-8")]
+[Constructor(optional HTMLFormElement form)]
+[Constructor(optional MozXMLHttpRequestParameters params),
+[Constructor(unsigned long numberOfChannels, unsigned long length, float sampleRate),
+[Constructor, Constructor((ArrayBuffer or ArrayBufferView or Blob or DOMString)[] blobParts, optional BlobPropertyBag options)]
+
+[NamedConstructor=Audio(optional DOMString src)]
+[NamedConstructor=Image(optional unsigned long width, optional unsigned long height)]
+[NamedConstructor=Option(optional DOMString text, optional DOMString value, optional boolean defaultSelected, optional boolean selected)]
+[PrefControlled, Constructor(ActivityOptions options)]
+[PrefControlled, Constructor(DOMString title, optional NotificationOptions options)]
+
+[Throws] sequence<DOMTransaction>? item(unsigned long index);
+[Throws] void clearRedo();
+[Throws] void clearUndo();
+[Throws] void redo();
+[Throws] void transact(DOMTransaction transaction, boolean merge);
+[Throws] void undo();
+
+[WebGLHandlesContextLoss] boolean isContextLost();
+[WebGLHandlesContextLoss] GLboolean isBuffer(WebGLBuffer? buffer);
+[WebGLHandlesContextLoss] GLboolean isEnabled(GLenum cap);
+[WebGLHandlesContextLoss] GLboolean isFramebuffer(WebGLFramebuffer? framebuffer);
+[WebGLHandlesContextLoss] GLboolean isProgram(WebGLProgram? program);
+[WebGLHandlesContextLoss] GLboolean isRenderbuffer(WebGLRenderbuffer? renderbuffer);
+[WebGLHandlesContextLoss] GLboolean isShader(WebGLShader? shader);
+[WebGLHandlesContextLoss] GLboolean isTexture(WebGLTexture? texture);
+[WebGLHandlesContextLoss] GLenum checkFramebufferStatus(GLenum target);
+[WebGLHandlesContextLoss] GLenum getError();
+[WebGLHandlesContextLoss] GLint getAttribLocation(WebGLProgram? program, DOMString name);
+[WebGLHandlesContextLoss] GLsizeiptr getVertexAttribOffset(GLuint index, GLenum pname);
+[WebGLHandlesContextLoss] WebGLContextAttributes? getContextAttributes();
+
+AnalyserNode createAnalyser();
+any getBufferParameter(GLenum target, GLenum pname);
+any getFramebufferAttachmentParameter(GLenum target, GLenum attachment,
+any getInterface(IID iid);
+any getParameter(GLenum pname);
+any getProgramParameter(WebGLProgram? program, GLenum pname);
+any getRenderbufferParameter(GLenum target, GLenum pname);
+any getShaderParameter(WebGLShader? shader, GLenum pname);
+any getTexParameter(GLenum target, GLenum pname);
+any getUniform(WebGLProgram? program, WebGLUniformLocation? location);
+any getUserData(DOMString key);
+any getVertexAttrib(GLuint index, GLenum pname);
+any setUserData(DOMString key, any data, UserDataHandler? handler);
+ArchiveRequest getFile(DOMString filename);
+ArchiveRequest getFilenames();
+ArchiveRequest getFiles();
+ArrayBuffer readAsArrayBuffer(Blob blob);
+Attr createAttribute(DOMString name);
+Attr createAttributeNS(DOMString? namespace, DOMString name);
+Attr removeNamedItem(DOMString name);
+Attr removeNamedItemNS(DOMString? namespaceURI, DOMString localName);
+Attr? getAttributeNode(DOMString name);
+Attr? getAttributeNodeNS(DOMString? namespaceURI, DOMString localName);
+Attr? getNamedItemNS(DOMString? namespaceURI, DOMString localName);
+Attr? removeAttributeNode(Attr oldAttr);
+Attr? setAttributeNode(Attr newAttr);
+Attr? setAttributeNodeNS(Attr newAttr);
+Attr? setNamedItem(Attr arg);
+Attr? setNamedItemNS(Attr arg);
+AudioBuffer createBuffer(unsigned long numberOfChannels, unsigned long length, float sampleRate);
+AudioBuffer? createBuffer(ArrayBuffer buffer, boolean mixToMono);
+AudioBufferSourceNode createBufferSource();
+BiquadFilterNode createBiquadFilter();
+Blob slice(optional long long start,
+BlobPropertyBag blobBag();
+boolean                           getModifierState(DOMString keyArg);
+boolean animationsPaused();
+boolean checkValidity();
+boolean checkValidity();
+boolean checkValidity();
+boolean checkValidity();
+boolean checkValidity();
+boolean checkValidity();
+boolean checkValidity();
+boolean contains(DOMString string);
+boolean contains(DOMString token);
+boolean contains(Node? other);
+boolean dispatchEvent(Event event);
+boolean execCommand(DOMString commandId, optional boolean showUI = false,
+boolean getModifierState(DOMString key);
+boolean getPreventDefault();
+boolean hasAttribute(DOMString name);
+boolean hasAttributeNS(DOMString? namespace, DOMString localName);
+boolean hasAttributes();
+boolean hasChildNodes();
+boolean hasExtension(DOMString extension);
+boolean hasFeature(DOMString feature,
+boolean hasFocus();
+boolean intersectsNode(Node node);
+boolean isDefaultNamespace(DOMString? namespace);
+boolean isEqualNode(Node? node);
+boolean isPointInPath(unrestricted double x, unrestricted double y, optional CanvasWindingRule winding = "nonzero");
+boolean isPointInRange(Node node, unsigned long offset);
+boolean isPointInStroke(double x, double y);
+boolean load(DOMString url);
+boolean mozIsTextField(boolean aExcludePassword);
+boolean mozLockOrientation(DOMString orientation);
+boolean mozLockOrientation(sequence<DOMString> orientation);
+boolean mozMatchesSelector(DOMString selector);
+boolean queryCommandEnabled(DOMString commandId);
+boolean queryCommandIndeterm(DOMString commandId);
+boolean queryCommandState(DOMString commandId);
+boolean queryCommandSupported(DOMString commandId);
+boolean toggle(DOMString token);
+callback BeforeUnloadEventHandlerNonNull = DOMString? (Event event);
+callback DecodeErrorCallback = void ();
+callback DecodeSuccessCallback = void (AudioBuffer decodedData);
+callback DOMTransactionCallback = void();
+callback EventHandlerNonNull = any (Event event);
+callback FrameRequestCallback = void (DOMHighResTimeStamp time);
+callback Function = any(any... arguments);
+callback LifecycleCreatedCallback = void();
+callback MutationCallback = void (sequence<MutationRecord> mutations, MutationObserver observer);
+callback NotificationPermissionCallback = void (NotificationPermission permission);
+callback OfflineRenderSuccessCallback = void (AudioBuffer renderedData);
+callback OnErrorEventHandlerNonNull = boolean ((Event or DOMString) event, optional DOMString source, optional unsigned long lineno, optional unsigned long column);
+callback PositionCallback = void (Position position);
+callback PositionErrorCallback = void (PositionError positionError);
+callback RTCPeerConnectionErrorCallback = void (DOMString errorInformation);
+callback RTCSessionDescriptionCallback = void (mozRTCSessionDescription sdp);
+callback VoidFunction = void ();
+CanvasGradient createLinearGradient(double x0, double y0, double x1, double y1);
+CanvasGradient createRadialGradient(double x0, double y0, double r0, double x1, double y1, double r1);
+CanvasPattern createPattern((HTMLImageElement or HTMLCanvasElement or HTMLVideoElement) image, [TreatNullAs=EmptyString] DOMString repetition);
+CaretPosition? caretPositionFromPoint (float x, float y);
+CDATASection createCDATASection(DOMString data);
+CFStateChangeEventDict cfstateChangeEvent();
+ChannelMergerNode createChannelMerger(optional unsigned long numberOfInputs = 6);
+ChannelSplitterNode createChannelSplitter(optional unsigned long numberOfOutputs = 6);
+ClientRect getBoundingClientRect();
+ClientRect getBoundingClientRect();
+ClientRect? getClientRect();
+ClientRectList getClientRects();
+ClientRectList? getClientRects();
+cmp(any first,
+Comment createComment(DOMString data);
+Constructor (optional RTCConfiguration configuration,
+Constructor(Blob blob, optional ArchiveReaderOptions options)]
+Constructor(DOMString ignored)]
+Constructor(DOMString text)]
+Constructor(DOMString type,
+Constructor(DOMString type, optional MediaStreamEventInit eventInitDict)]
+Constructor(DOMString type, optional RTCDataChannelEventInit eventInitDict)]
+Constructor(DOMString url),
+Constructor(DOMString url, DOMString protocols),
+Constructor(DOMString url, sequence<DOMString> protocols)]
+Constructor(optional RTCIceCandidateInit candidateInitDict)]
+Constructor(optional RTCSessionDescriptionInit descriptionInitDict)]
+Constructor(Principal? prin, optional URI? documentURI = null,
+Counter            getCounterValue();
+CSSValue? getPropertyCSSValue(DOMString property);
+DelayNode createDelay(optional double maxDelayTime = 1);
+DelayNode createDelayNode(optional double maxDelayTime = 1);
+deleteDatabase(DOMString name);
+deleteForPrincipal(Principal principal,
+deleter void (DOMString name);
+DesktopNotification createNotification(DOMString title,
+Document createDocument(DOMString? namespace,
+Document createHTMLDocument(optional DOMString title);
+Document open(optional DOMString type = "text/html", optional DOMString replace = "");
+Document parseFromBuffer(sequence<octet> buf, unsigned long bufLen,
+Document parseFromBuffer(Uint8Array buf, unsigned long bufLen,
+Document parseFromStream(InputStream stream, DOMString? charset,
+Document parseFromString(DOMString str, SupportedType type);
+Document? getSVGDocument();
+Document? getSVGDocument();
+Document? getSVGDocument();
+DocumentFragment cloneContents();
+DocumentFragment createContextualFragment(DOMString fragment);
+DocumentFragment createDocumentFragment();
+DocumentFragment extractContents();
+DocumentFragment getCueAsHTML();
+DocumentType createDocumentType(DOMString qualifiedName, DOMString publicId,
+DOMHighResTimeStamp now();
+DOMRequest getFile();
+DOMString getStringValue();
+DOMString appendItem(DOMString newItem);
+DOMString canPlayType(DOMString type);
+DOMString decode();
+DOMString decode(ArrayBufferView input, optional TextDecodeOptions options);
+DOMString getAllResponseHeaders();
+DOMString getItem(unsigned long index);
+DOMString getPropertyPriority(DOMString property);
+DOMString getPropertyValue(DOMString property);
+DOMString initialize(DOMString newItem);
+DOMString insertItemBefore(DOMString newItem, unsigned long index);
+DOMString queryCommandValue(DOMString commandId);
+DOMString readAsBinaryString(Blob blob);
+DOMString readAsDataURL(Blob blob);
+DOMString readAsText(Blob blob, optional DOMString encoding);
+DOMString removeItem(unsigned long index);
+DOMString removeProperty(DOMString property);
+DOMString replaceItem(DOMString newItem, unsigned long index);
+DOMString serializeToString(Node root);
+DOMString substringData(unsigned long offset, unsigned long count);
+DOMString toDataURL(optional DOMString type = "",
+DOMString? getAttribute(DOMString name);
+DOMString? getAttributeNS(DOMString? namespace, DOMString localName);
+DOMString? getProgramInfoLog(WebGLProgram? program);
+DOMString? getResponseHeader(DOMString header);
+DOMString? getShaderInfoLog(WebGLShader? shader);
+DOMString? getShaderSource(WebGLShader? shader);
+DOMString? lookupNamespaceURI(DOMString? prefix);
+DOMString? lookupPrefix(DOMString? namespace);
+double end(unsigned long index);
+double start(unsigned long index);
+DynamicsCompressorNode createDynamicsCompressor();
+Element createElement(DOMString localName);
+Element createElementNS(DOMString? namespace, DOMString qualifiedName);
+Element?  querySelector(DOMString selectors);
+Element?  querySelector(DOMString selectors);
+Element?  querySelector(DOMString selectors);
+Element? elementFromPoint (float x, float y);
+Element? getAnonymousElementByAttribute(Element elt, DOMString attrName,
+Element? getBindingParent(Node node);
+Element? getElementById(DOMString elementId);
+Element? getElementById(DOMString elementId);
+Event createEvent(DOMString interface);
+EventHandler getEventHandler(DOMString type);
+File mozGetAsFile(DOMString name, optional DOMString? type = null);
+FilePropertyBag fileBag();
+float getFloatValue(unsigned short unitType);
+float getComputedTextLength();
+float getCurrentTime();
+float getCurrentTime();
+float getRotationOfChar(unsigned long charnum);
+float getSimpleDuration();
+float getStartTime();
+float getSubStringLength(unsigned long charnum, unsigned long nchars);
+float getTotalLength();
+Float32Array getChannelData(unsigned long channel);
+Function getFunction();
+GainNode createGain();
+GainNode createGainNode();
+getter Attr? getNamedItem(DOMString name);
+getter Attr? item(unsigned long index);
+getter ClientRect? item(unsigned long index);
+getter CSSValue? item(unsigned long index);
+getter DOMString (DOMString name);
+getter DOMString item(unsigned long index);
+getter DOMString(unsigned long index);
+getter DOMString? item(unsigned long index);
+getter DOMString? item(unsigned long index);
+getter Element? item(unsigned long index);
+getter Element? item(unsigned long index);
+getter File? item(unsigned long index);
+getter MediaStream? (unsigned long index);
+getter MozTreeColumn? getColumnAt(unsigned long index);
+getter MozTreeColumn? getNamedColumn(DOMString id);
+getter Node? item(unsigned long index);
+getter object (DOMString name);
+getter object? namedItem(DOMString name);
+getter PaintRequest? item(unsigned long index);
+getter SpeechGrammar item(unsigned long index);
+getter SpeechRecognitionAlternative item(unsigned long index);
+getter SpeechRecognitionResult item(unsigned long index);
+getter SVGLength getItem(unsigned long index);
+getter SVGNumber getItem(unsigned long index);
+getter SVGPathSeg getItem(unsigned long index);
+getter SVGPoint getItem(unsigned long index);
+getter SVGTransform getItem(unsigned long index);
+getter TextTrack (unsigned long index);
+getter TextTrackCue (unsigned long index);
+getter Touch? item(unsigned long index);
+HTMLCollection getElementsByClassName(DOMString classNames);
+HTMLCollection getElementsByClassName(DOMString classNames);
+HTMLCollection getElementsByTagName(DOMString localName);
+HTMLCollection getElementsByTagName(DOMString localName);
+HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
+HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
+HTMLElement createCaption();
+HTMLElement createTFoot();
+HTMLElement createTHead();
+HTMLElement insertCell(optional long index = -1);
+HTMLElement insertRow(optional long index = -1);
+HTMLElement insertRow(optional long index = -1);
+ImageData createImageData(double sw, double sh);
+ImageData createImageData(ImageData imagedata);
+ImageData getImageData(double sx, double sy, double sw, double sh);
+imgIRequest? getRequest(long aRequestType);
+InspectorRGBTriple rgbTriple();
+legacycaller any (any... arguments);
+legacycaller any (any... arguments);
+LockedFile open(optional FileMode mode = "readonly");
+long getCharNumAtPosition(SVGPoint point);
+long getNumberOfChars();
+long getRequestType(imgIRequest aRequest);
+long watchPosition(PositionCallback successCallback,
+MediaStream mozCaptureStream();
+MediaStream mozCaptureStreamUntilEnded();
+MediaStream? getStreamById (DOMString streamId);
+MenuBuilder createBuilder();
+MozTreeColumn? getColumnFor(Element? element);
+MozTreeColumn? getFirstColumn();
+MozTreeColumn? getKeyColumn();
+MozTreeColumn? getLastColumn();
+MozTreeColumn? getPrimaryColumn();
+MozTreeColumn? getSortedColumn();
+Node adoptNode(Node node);
+Node appendChild(Node node);
+Node cloneNode(optional boolean deep = true);
+Node importNode(Node node, optional boolean deep = true);
+Node insertBefore(Node node, Node? child);
+Node removeChild(Node child);
+Node replaceChild(Node node, Node child);
+Node? firstChild();
+Node? lastChild();
+Node? nextNode();
+Node? nextNode();
+Node? nextSibling();
+Node? parentNode();
+Node? previousNode();
+Node? previousNode();
+Node? previousSibling();
+NodeIterator createNodeIterator(Node root, optional unsigned long whatToShow = 0xFFFFFFFF, optional NodeFilter? filter = null);
+NodeList  querySelectorAll(DOMString selectors);
+NodeList  querySelectorAll(DOMString selectors);
+NodeList  querySelectorAll(DOMString selectors);
+NodeList getElementsByName(DOMString elementName);
+NodeList? getAnonymousNodes(Element elt);
+nsIStreamListener? loadImageWithChannel(MozChannel aChannel);
+nsISupports? getContext(DOMString contextId, optional any contextOptions);
+nsISupports? MozGetIPCContext(DOMString contextId);
+nsIVariant? getData(DOMString? key);
+object register(DOMString name, optional ElementRegistrationOptions options);
+object toJSON();
+object? getExtension(DOMString name);
+object? mozGetMetadata();
+object? namedItem(DOMString name);
+open(DOMString name,
+openForPrincipal(Principal principal,
+PannerNode createPanner();
+ProcessingInstruction createProcessingInstruction(DOMString target, DOMString data);
+PropertyValueArray getValues();
+Range cloneRange();
+Range createRange();
+Rect  getRectValue();
+RGBColor getRGBColorValue();
+RTCDataChannel createDataChannel (DOMString label,
+ScriptProcessorNode createJavaScriptNode(optional unsigned long bufferSize = 0,
+ScriptProcessorNode createScriptProcessor(optional unsigned long bufferSize = 0,
+Selection getSelection();
+sequence<AudioStreamTrack> getAudioTracks ();
+sequence<DOMString> mozGetFileNameArray();
+sequence<DOMString>? getSupportedExtensions();
+sequence<MediaStream> getLocalStreams ();
+sequence<MediaStream> getRemoteStreams ();
+sequence<MutationRecord> takeRecords();
+sequence<SpeechSynthesisVoice> getVoices();
+sequence<VideoStreamTrack> getVideoTracks ();
+sequence<WebGLShader>? getAttachedShaders(WebGLProgram? program);
+setter creator void (DOMString name, DOMString value);
+setter creator void (unsigned long index, HTMLOptionElement? option);
+setter creator void (unsigned long index, HTMLOptionElement? option);
+short compareBoundaryPoints(unsigned short how, Range sourceRange);
+short comparePoint(Node node, unsigned long offset);
+static boolean supports(DOMString conditionText);
+static boolean supports(DOMString property, DOMString value);
+static DOMString? createObjectURL(Blob blob, optional objectURLOptions options);
+static DOMString? createObjectURL(MediaStream stream, optional objectURLOptions options);
+static void requestPermission(optional NotificationPermissionCallback permissionCallback);
+static void revokeObjectURL(DOMString url);
+stringifier DOMString ();
+SVGAngle createSVGAngle();
+SVGLength appendItem(SVGLength newItem);
+SVGLength createSVGLength();
+SVGLength initialize(SVGLength newItem);
+SVGLength insertItemBefore(SVGLength newItem, unsigned long index);
+SVGLength removeItem(unsigned long index);
+SVGLength replaceItem(SVGLength newItem, unsigned long index);
+SVGMatrix createSVGMatrix();
+SVGMatrix flipX();
+SVGMatrix flipY();
+SVGMatrix getTransformToElement(SVGGraphicsElement element);
+SVGMatrix inverse();
+SVGMatrix multiply(SVGMatrix secondMatrix);
+SVGMatrix rotate(float angle);
+SVGMatrix rotateFromVector(float x, float y);
+SVGMatrix scale(float scaleFactor);
+SVGMatrix scaleNonUniform(float scaleFactorX, float scaleFactorY);
+SVGMatrix skewX(float angle);
+SVGMatrix skewY(float angle);
+SVGMatrix translate(float x, float y);
+SVGMatrix? getCTM();
+SVGMatrix? getScreenCTM();
+SVGNumber appendItem(SVGNumber newItem);
+SVGNumber createSVGNumber();
+SVGNumber initialize(SVGNumber newItem);
+SVGNumber insertItemBefore(SVGNumber newItem, unsigned long index);
+SVGNumber removeItem(unsigned long index);
+SVGNumber replaceItem(SVGNumber newItem, unsigned long index);
+SVGPathSeg appendItem(SVGPathSeg newItem);
+SVGPathSeg initialize(SVGPathSeg newItem);
+SVGPathSeg insertItemBefore(SVGPathSeg newItem, unsigned long index);
+SVGPathSeg removeItem(unsigned long index);
+SVGPathSeg replaceItem(SVGPathSeg newItem, unsigned long index);
+SVGPathSegArcAbs createSVGPathSegArcAbs(float x, float y, float r1, float r2, float angle, boolean largeArcFlag, boolean sweepFlag);
+SVGPathSegArcRel createSVGPathSegArcRel(float x, float y, float r1, float r2, float angle, boolean largeArcFlag, boolean sweepFlag);
+SVGPathSegClosePath createSVGPathSegClosePath();
+SVGPathSegCurvetoCubicAbs createSVGPathSegCurvetoCubicAbs(float x, float y, float x1, float y1, float x2, float y2);
+SVGPathSegCurvetoCubicRel createSVGPathSegCurvetoCubicRel(float x, float y, float x1, float y1, float x2, float y2);
+SVGPathSegCurvetoCubicSmoothAbs createSVGPathSegCurvetoCubicSmoothAbs(float x, float y, float x2, float y2);
+SVGPathSegCurvetoCubicSmoothRel createSVGPathSegCurvetoCubicSmoothRel(float x, float y, float x2, float y2);
+SVGPathSegCurvetoQuadraticAbs createSVGPathSegCurvetoQuadraticAbs(float x, float y, float x1, float y1);
+SVGPathSegCurvetoQuadraticRel createSVGPathSegCurvetoQuadraticRel(float x, float y, float x1, float y1);
+SVGPathSegCurvetoQuadraticSmoothAbs createSVGPathSegCurvetoQuadraticSmoothAbs(float x, float y);
+SVGPathSegCurvetoQuadraticSmoothRel createSVGPathSegCurvetoQuadraticSmoothRel(float x, float y);
+SVGPathSegLinetoAbs createSVGPathSegLinetoAbs(float x, float y);
+SVGPathSegLinetoHorizontalAbs createSVGPathSegLinetoHorizontalAbs(float x);
+SVGPathSegLinetoHorizontalRel createSVGPathSegLinetoHorizontalRel(float x);
+SVGPathSegLinetoRel createSVGPathSegLinetoRel(float x, float y);
+SVGPathSegLinetoVerticalAbs createSVGPathSegLinetoVerticalAbs(float y);
+SVGPathSegLinetoVerticalRel createSVGPathSegLinetoVerticalRel(float y);
+SVGPathSegMovetoAbs createSVGPathSegMovetoAbs(float x, float y);
+SVGPathSegMovetoRel createSVGPathSegMovetoRel(float x, float y);
+SVGPoint appendItem(SVGPoint newItem);
+SVGPoint createSVGPoint();
+SVGPoint getEndPositionOfChar(unsigned long charnum);
+SVGPoint getPointAtLength(float distance);
+SVGPoint getStartPositionOfChar(unsigned long charnum);
+SVGPoint initialize(SVGPoint newItem);
+SVGPoint insertItemBefore(SVGPoint newItem, unsigned long index);
+SVGPoint matrixTransform(SVGMatrix matrix);
+SVGPoint removeItem(unsigned long index);
+SVGPoint replaceItem(SVGPoint newItem, unsigned long index);
+SVGRect createSVGRect();
+SVGRect getBBox();
+SVGRect getExtentOfChar(unsigned long charnum);
+SVGTransform appendItem(SVGTransform newItem);
+SVGTransform createSVGTransform();
+SVGTransform createSVGTransformFromMatrix(SVGMatrix matrix);
+SVGTransform createSVGTransformFromMatrix(SVGMatrix matrix);
+SVGTransform initialize(SVGTransform newItem);
+SVGTransform insertItemBefore(SVGTransform newItem, unsigned long index);
+SVGTransform removeItem(unsigned long index);
+SVGTransform replaceItem(SVGTransform newItem, unsigned long index);
+SVGTransform? consolidate();
+test_webidl_files := $(NULL)
+Text createTextNode(DOMString data);
+Text splitText(unsigned long offset);
+TextMetrics measureText(DOMString text);
+TextTrack addTextTrack(TextTrackKind kind,
+TextTrackCue? getCueById(DOMString id);
+Touch createTouch(optional Window? view = null,
+Touch identifiedTouch(long identifier);
+TouchList createTouchList();
+TouchList createTouchList(sequence<Touch> touches);
+TouchList createTouchList(Touch touch, Touch... touches);
+TreeWalker createTreeWalker(Node root, optional unsigned long whatToShow = 0xFFFFFFFF, optional NodeFilter? filter = null);
+Uint8Array encode(optional DOMString input = "", optional TextEncodeOptions options);
+unsigned long getContentTypeForMIMEType(DOMString aMimeType);
+unsigned long getPathSegAtLength(float distance);
+unsigned long insertRule(DOMString rule, unsigned long index);
+unsigned long long mozCurrentSampleOffset();
+unsigned long mozWriteAudio(Float32Array data);
+unsigned long mozWriteAudio(sequence<unrestricted float> data);
+unsigned long suspendRedraw(unsigned long maxWaitMilliseconds);
+unsigned short acceptNode(Node node);
+unsigned short compareDocumentPosition(Node other);
+USSDReceivedEventDict ussdReceivedEvent();
+void initMouseEvent(DOMString typeArg,
+void initNSMouseEvent(DOMString typeArg,
+void setFloatValue(unsigned short unitType,
+void setStringValue(unsigned short stringType,
+void abort();
+void abort();
+void abort();
+void activeTexture(GLenum texture);
+void add((HTMLOptionElement or HTMLOptGroupElement) element, optional (HTMLElement or long)? before = null);
+void add((HTMLOptionElement or HTMLOptGroupElement) element, optional (HTMLElement or long)? before = null);
+void add(DOMString token);
+void addColorStop(float offset, DOMString color);
+void addCue(TextTrackCue cue);
+void addEventListener(DOMString type,
+void addFromString(DOMString string, optional float weight);
+void addFromURI(DOMString src, optional float weight);
+void addIceCandidate (mozRTCIceCandidate candidate,
+void addObserver(imgINotificationObserver aObserver);
+void addStream (MediaStream stream, optional object? constraints);
+void append((Node or DOMString)... nodes);
+void append(DOMString name, Blob value, optional DOMString filename);
+void append(DOMString name, DOMString value);
+void appendData(DOMString data);
+void arc(double x, double y, double radius, double startAngle, double endAngle, optional boolean anticlockwise = false);
+void arcTo(double x1, double y1, double x2, double y2, double radius);
+void assign(DOMString url);
+void asyncDrawXULElement(XULElement elem, double x, double y, double w,
+void attachShader(WebGLProgram? program, WebGLShader? shader);
+void beginElement();
+void beginElementAt(float offset);
+void beginPath();
+void bezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y);
+void bindAttribLocation(WebGLProgram? program, GLuint index, DOMString name);
+void bindBuffer(GLenum target, WebGLBuffer? buffer);
+void bindFramebuffer(GLenum target, WebGLFramebuffer? framebuffer);
+void bindRenderbuffer(GLenum target, WebGLRenderbuffer? renderbuffer);
+void bindTexture(GLenum target, WebGLTexture? texture);
+void blendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+void blendEquation(GLenum mode);
+void blendEquationSeparate(GLenum modeRGB, GLenum modeAlpha);
+void blendFunc(GLenum sfactor, GLenum dfactor);
+void blendFuncSeparate(GLenum srcRGB, GLenum dstRGB,
+void blur();
+void bufferData(GLenum target, ArrayBuffer? data, GLenum usage);
+void bufferData(GLenum target, ArrayBufferView data, GLenum usage);
+void bufferData(GLenum target, GLsizeiptr size, GLenum usage);
+void bufferSubData(GLenum target, GLintptr offset, ArrayBuffer? data);
+void bufferSubData(GLenum target, GLintptr offset, ArrayBufferView data);
+void build(MenuBuilder aBuilder);
+void CameraPictureOptions(optional CameraPictureOptions arg);
+void cancel();
+void cancelPlayPreview();
+void cancelScheduledValues(double startTime);
+void clear();
+void clear();
+void clear();
+void clear();
+void clear();
+void clear();
+void clear();
+void clear(GLbitfield mask);
+void clearColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+void clearDepth(GLclampf depth);
+void clearRect(double x, double y, double w, double h);
+void clearStencil(GLint s);
+void clearWatch(long watchId);
+void click();
+void clip(optional CanvasWindingRule winding = "nonzero");
+void close ();
+void close();
+void close();
+void close();
+void close();
+void close();
+void close([Clamp] optional unsigned short code, optional DOMString reason);
+void closePath();
+void collapse(boolean toStart);
+void colorMask(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha);
+void compileShader(WebGLShader? shader);
+void compressedTexImage2D(GLenum target, GLint level, GLenum internalformat,
+void compressedTexSubImage2D(GLenum target, GLint level,
+void connect(AudioNode destination, optional unsigned long output = 0, optional unsigned long input = 0);
+void connect(AudioParam destination, optional unsigned long output = 0);
+void continue();
+void convertToSpecifiedUnits(unsigned short unitType);
+void copyTexImage2D(GLenum target, GLint level, GLenum internalformat,
+void copyTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset,
+void createAnswer (RTCSessionDescriptionCallback successCallback,
+void createOffer (RTCSessionDescriptionCallback successCallback,
+void cullFace(GLenum mode);
+void decodeAudioData(ArrayBuffer audioData,
+void deleteBuffer(WebGLBuffer? buffer);
+void deleteCaption();
+void deleteCell(long index);
+void deleteContents();
+void deleteData(unsigned long offset, unsigned long count);
+void deleteFramebuffer(WebGLFramebuffer? framebuffer);
+void deleteProgram(WebGLProgram? program);
+void deleteRenderbuffer(WebGLRenderbuffer? renderbuffer);
+void deleteRow(long index);
+void deleteRow(long index);
+void deleteRule(unsigned long index);
+void deleteShader(WebGLShader? shader);
+void deleteTexture(WebGLTexture? texture);
+void deleteTFoot();
+void deleteTHead();
+void depthFunc(GLenum func);
+void depthMask(GLboolean flag);
+void depthRange(GLclampf zNear, GLclampf zFar);
+void detach();
+void detach();
+void detachShader(WebGLProgram? program, WebGLShader? shader);
+void DeviceStorageEnumerationParameters(optional DeviceStorageEnumerationParameters arg);
+void disable(GLenum cap);
+void disableVertexAttribArray(GLuint index);
+void disconnect();
+void disconnect(optional unsigned long output = 0);
+void drawArrays(GLenum mode, GLint first, GLsizei count);
+void drawElements(GLenum mode, GLsizei count, GLenum type, GLintptr offset);
+void drawImage((HTMLImageElement or HTMLCanvasElement or HTMLVideoElement) image, double dx, double dy);
+void drawImage((HTMLImageElement or HTMLCanvasElement or HTMLVideoElement) image, double dx, double dy, double dw, double dh);
+void drawImage((HTMLImageElement or HTMLCanvasElement or HTMLVideoElement) image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
+void drawWindow(Window window, double x, double y, double w, double h,
+void enable(GLenum cap);
+void enableStyleSheetsForSet (DOMString? name);
+void enableVertexAttribArray(GLuint index);
+void endElement();
+void endElementAt(float offset);
+void exponentialRampToValueAtTime(float value, double endTime);
+void fill(optional CanvasWindingRule winding = "nonzero");
+void fillRect(double x, double y, double w, double h);
+void fillText(DOMString text, double x, double y, optional double maxWidth);
+void finish();
+void flush();
+void focus();
+void forceImageState(boolean aForce, unsigned long long aState);
+void forceRedraw();
+void forceReload();
+void framebufferRenderbuffer(GLenum target, GLenum attachment,
+void framebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget,
+void frameRequestCallback(FrameRequestCallback arg);
+void frontFace(GLenum mode);
+void funcDNSCacheDict(optional DNSCacheDict arg);
+void funcHttpConnDict(optional HttpConnDict arg);
+void funcSocketsDict(optional SocketsDict arg);
+void funcWebSocketDict(optional WebSocketDict arg);
+void generateMipmap(GLenum target);
+void getByteFrequencyData(Uint8Array array);
+void getByteTimeDomainData(Uint8Array array);
+void getCurrentPosition(PositionCallback successCallback,
+void getFloatFrequencyData(Float32Array array);
+void getFrequencyResponse(Float32Array frequencyHz,
+void handleEvent(Event event);
+void hint(GLenum target, GLenum mode);
+void idbObjectStoreParams(optional IDBObjectStoreParameters arg);
+void init(optional Principal? principal = null,
+void initAudioAvailableEvent(DOMString type,
+void initCommandEvent(DOMString type,
+void initCompositionEvent(DOMString typeArg,
+void initDeviceMotionEvent(DOMString type,
+void initDragEvent(DOMString type,
+void initEvent(DOMString type, boolean bubbles, boolean cancelable);
+void initKeyEvent(DOMString type,
+void initMessageEvent(DOMString aType,
+void initMouseScrollEvent(DOMString type,
+void initMutationEvent(DOMString type,
+void initScrollAreaEvent(DOMString type,
+void initSimpleGestureEvent(DOMString typeArg,
+void initTimeEvent(DOMString aType,
+void initTouchEvent(DOMString type,
+void initUIEvent(DOMString aType,
+void insertAdjacentHTML(DOMString position, DOMString text);
+void insertData(unsigned long offset, DOMString data);
+void insertNode(Node node);
+void invalidateColumns();
+void linearRampToValueAtTime(float value, double endTime);
+void lineTo(double x, double y);
+void lineWidth(GLfloat width);
+void linkProgram(WebGLProgram? program);
+void load();
+void loadBindingDocument(DOMString documentURL);
+void loseContext();
+void MmsAttachment(optional MmsAttachment arg);
+void MmsParameters(optional MmsParameters arg);
+void moveTo(double x, double y);
+void mozCancelFullScreen();
+void mozExitPointerLock ();
+void mozFetchAsStream(nsIInputStreamCallback callback, optional DOMString? type = null);
+void mozLoadFrom(HTMLMediaElement other);
+void mozRequestFullScreen();
+void mozRequestPointerLock();
+void mozSetFileNameArray(sequence<DOMString> fileNames);
+void mozSetImageElement(DOMString aImageElementId,
+void mozSetup(unsigned long channels, unsigned long rate);
+void mozUnlockOrientation();
+void newValueSpecifiedUnits(unsigned short unitType, float valueInSpecifiedUnits);
+void normalize();
+void noteGrainOn(double when, double grainOffset, double grainDuration);
+void noteOff(double when);
+void noteOn(double when);
+void observe(Node target, optional MutationObserverInit options);
+void open(DOMString method, DOMString url, optional boolean async = true,
+void overrideMimeType(DOMString mime);
+void pause();
+void pause();
+void pauseAnimations();
+void pixelStorei(GLenum pname, GLint param);
+void play();
+void playPlugin();
+void polygonOffset(GLfloat factor, GLfloat units);
+void prepend((Node or DOMString)... nodes);
+void preventDefault();
+void putImageData(ImageData imagedata, double dx, double dy);
+void putImageData(ImageData imagedata, double dx, double dy, double dirtyX, double dirtyY, double dirtyWidth, double dirtyHeight);
+void quadraticCurveTo(double cpx, double cpy, double x, double y);
+void readAsArrayBuffer(Blob blob);
+void readAsBinaryString(Blob filedata);
+void readAsDataURL(Blob blob);
+void readAsText(Blob blob, optional DOMString label = "");
+void readPixels(GLint x, GLint y, GLsizei width, GLsizei height,
+void rect(double x, double y, double w, double h);
+void releaseCapture();
+void releaseCapture();
+void reload();
+void remove();
+void remove();
+void remove(DOMString token);
+void remove(long index);
+void remove(long index);
+void removeAttribute(DOMString name);
+void removeAttributeNS(DOMString? namespace, DOMString localName);
+void removeCue(TextTrackCue cue);
+void removeEventListener(DOMString type,
+void removeObserver(imgINotificationObserver aObserver);
+void removeStream (MediaStream stream);
+void renderbufferStorage(GLenum target, GLenum internalformat,
+void replace(DOMString url);
+void replaceData(unsigned long offset, unsigned long count, DOMString data);
+void restoreContext();
+void restoreImage();
+void restoreImageTo(long x, long y);
+void restoreNaturalOrder();
+void resume();
+void rotate(double angle);
+void sampleCoverage(GLclampf value, GLboolean invert);
+void scale(double x, double y);
+void scissor(GLint x, GLint y, GLsizei width, GLsizei height);
+void scrollIntoView(optional boolean top = true);
+void select();
+void select();
+void selectNode(Node refNode);
+void selectNodeContents(Node refNode);
+void selectSubString(unsigned long charnum, unsigned long nchars);
+void send();
+void send(ArrayBuffer data);
+void send(ArrayBuffer data);
+void send(ArrayBuffer data);
+void send(ArrayBufferView data);
+void send(ArrayBufferView data);
+void send(ArrayBufferView data);
+void send(Blob data);
+void send(Blob data);
+void send(Blob data);
+void send(Document data);
+void send(DOMString data);
+void send(DOMString data);
+void send(DOMString? data);
+void send(FormData data);
+void send(InputStream data);
+void sendAsBinary(DOMString body);
+void sendShowEvent();
+void serializeToStream(Node root, OutputStream stream, DOMString? charset);
+void setAttribute(DOMString name, DOMString value);
+void setAttributeNS(DOMString? namespace, DOMString name, DOMString value);
+void setCapture(optional boolean retargetToElement = false);
+void setCurrentTime(float seconds);
+void setCustomValidity(DOMString error);
+void setCustomValidity(DOMString error);
+void setCustomValidity(DOMString error);
+void setCustomValidity(DOMString error);
+void setCustomValidity(DOMString error);
+void setCustomValidity(DOMString error);
+void setCustomValidity(DOMString error);
+void setData(DOMString? key, any data);
+void setEnd(Node refNode, unsigned long offset);
+void setEndAfter(Node refNode);
+void setEndBefore(Node refNode);
+void setEventHandler(DOMString type, EventHandler handler);
+void setFilterRes(unsigned long filterResX, unsigned long filterResY);
+void setLocalDescription (mozRTCSessionDescription description,
+void setMatrix(SVGMatrix matrix);
+void setOrientation(double x, double y, double z);
+void setOrientation(double x, double y, double z, double xUp, double yUp, double zUp);
+void setOrientToAngle(SVGAngle angle);
+void setOrientToAuto();
+void setPosition(double x, double y, double z);
+void setPosition(double x, double y, double z);
+void setProperty(DOMString property, DOMString value, [TreatNullAs=EmptyString] optional DOMString priority);
+void setRemoteDescription (mozRTCSessionDescription description,
+void setRequestHeader(DOMString header, DOMString value);
+void setRotate(float angle, float cx, float cy);
+void setScale(float sx, float sy);
+void setSelectionRange(long start, long end, optional DOMString direction);
+void setSelectionRange(unsigned long start, unsigned long end, optional DOMString direction);
+void setSkewX(float angle);
+void setSkewY(float angle);
+void setStart(Node refNode, unsigned long offset);
+void setStartAfter(Node refNode);
+void setStartBefore(Node refNode);
+void setStdDeviation(float stdDeviationX, float stdDeviationY);
+void setTargetAtTime(float target, double startTime, double timeConstant);
+void setTargetValueAtTime(float target, double startTime, double timeConstant);
+void setTransform(double a, double b, double c, double d, double e, double f);
+void setTranslate(float tx, float ty);
+void setUserInput(DOMString input);
+void setUserInput(DOMString input);
+void setValueAtTime(float value, double startTime);
+void setValueCurveAtTime(Float32Array values, double startTime, double duration);
+void setVelocity(double x, double y, double z);
+void setVelocity(double x, double y, double z);
+void shaderSource(WebGLShader? shader, DOMString source);
+void show();
+void shrinkToFit();
+void speak(SpeechSynthesisUtterance utterance);
+void start();
+void start(optional double when = 0, optional double grainOffset = 0,
+void startRendering();
+void stencilFunc(GLenum func, GLint ref, GLuint mask);
+void stencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask);
+void stencilMask(GLuint mask);
+void stencilMaskSeparate(GLenum face, GLuint mask);
+void stencilOp(GLenum fail, GLenum zfail, GLenum zpass);
+void stencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass);
+void stepDown(optional long n = 1);
+void stepUp(optional long n = 1);
+void stop();
+void stop();
+void stop(optional double when = 0);
+void stopImmediatePropagation();
+void stopPropagation();
+void stroke();
+void strokeRect(double x, double y, double w, double h);
+void strokeText(DOMString text, double x, double y, optional double maxWidth);
+void surroundContents(Node newParent);
+void texImage2D(GLenum target, GLint level, GLenum internalformat,
+void texImage2D(GLenum target, GLint level, GLenum internalformat,
+void texImage2D(GLenum target, GLint level, GLenum internalformat,
+void texImage2D(GLenum target, GLint level, GLenum internalformat,
+void texImage2D(GLenum target, GLint level, GLenum internalformat,
+void texParameterf(GLenum target, GLenum pname, GLfloat param);
+void texParameteri(GLenum target, GLenum pname, GLint param);
+void texSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset,
+void texSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset,
+void texSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset,
+void texSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset,
+void texSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset,
+void toBlob(FileCallback _callback, optional DOMString type = "");
+void toggleImageSize();
+void transform(double a, double b, double c, double d, double e, double f);
+void translate(double x, double y);
+void uniform1f(WebGLUniformLocation? location, GLfloat x);
+void uniform1fv(WebGLUniformLocation? location, Float32Array v);
+void uniform1fv(WebGLUniformLocation? location, sequence<GLfloat> v);
+void uniform1i(WebGLUniformLocation? location, GLint x);
+void uniform1iv(WebGLUniformLocation? location, Int32Array v);
+void uniform1iv(WebGLUniformLocation? location, sequence<long> v);
+void uniform2f(WebGLUniformLocation? location, GLfloat x, GLfloat y);
+void uniform2fv(WebGLUniformLocation? location, Float32Array v);
+void uniform2fv(WebGLUniformLocation? location, sequence<GLfloat> v);
+void uniform2i(WebGLUniformLocation? location, GLint x, GLint y);
+void uniform2iv(WebGLUniformLocation? location, Int32Array v);
+void uniform2iv(WebGLUniformLocation? location, sequence<long> v);
+void uniform3f(WebGLUniformLocation? location, GLfloat x, GLfloat y, GLfloat z);
+void uniform3fv(WebGLUniformLocation? location, Float32Array v);
+void uniform3fv(WebGLUniformLocation? location, sequence<GLfloat> v);
+void uniform3i(WebGLUniformLocation? location, GLint x, GLint y, GLint z);
+void uniform3iv(WebGLUniformLocation? location, Int32Array v);
+void uniform3iv(WebGLUniformLocation? location, sequence<long> v);
+void uniform4f(WebGLUniformLocation? location, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
+void uniform4fv(WebGLUniformLocation? location, Float32Array v);
+void uniform4fv(WebGLUniformLocation? location, sequence<GLfloat> v);
+void uniform4i(WebGLUniformLocation? location, GLint x, GLint y, GLint z, GLint w);
+void uniform4iv(WebGLUniformLocation? location, Int32Array v);
+void uniform4iv(WebGLUniformLocation? location, sequence<long> v);
+void uniformMatrix2fv(WebGLUniformLocation? location, GLboolean transpose, Float32Array value);
+void uniformMatrix2fv(WebGLUniformLocation? location, GLboolean transpose, sequence<GLfloat> value);
+void uniformMatrix3fv(WebGLUniformLocation? location, GLboolean transpose, sequence<GLfloat> value);
+void uniformMatrix3fv(WebGLUniformLocation? location, GLboolean transpose, Float32Array value);
+void uniformMatrix4fv(WebGLUniformLocation? location, GLboolean transpose, Float32Array value);
+void uniformMatrix4fv(WebGLUniformLocation? location, GLboolean transpose, sequence<GLfloat> value);
+void unpauseAnimations();
+void unsuspendRedraw(unsigned long suspendHandleID);
+void unsuspendRedrawAll();
+void updateIce (optional RTCConfiguration configuration,
+void useProgram(WebGLProgram? program);
+void validateProgram(WebGLProgram? program);
+void vertexAttrib1f(GLuint indx, GLfloat x);
+void vertexAttrib1fv(GLuint indx, Float32Array values);
+void vertexAttrib1fv(GLuint indx, sequence<GLfloat> values);
+void vertexAttrib2f(GLuint indx, GLfloat x, GLfloat y);
+void vertexAttrib2fv(GLuint indx, Float32Array values);
+void vertexAttrib2fv(GLuint indx, sequence<GLfloat> values);
+void vertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z);
+void vertexAttrib3fv(GLuint indx, Float32Array values);
+void vertexAttrib3fv(GLuint indx, sequence<GLfloat> values);
+void vertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
+void vertexAttrib4fv(GLuint indx, Float32Array values);
+void vertexAttrib4fv(GLuint indx, sequence<GLfloat> values);
+void vertexAttribPointer(GLuint indx, GLint size, GLenum type,
+void viewport(GLint x, GLint y, GLsizei width, GLsizei height);
+void write(DOMString... text);
+void writeln(DOMString... text);
+WaveShaperNode createWaveShaper();
+WebGLActiveInfo? getActiveAttrib(WebGLProgram? program, GLuint index);
+WebGLActiveInfo? getActiveUniform(WebGLProgram? program, GLuint index);
+WebGLBuffer? createBuffer();
+WebGLFramebuffer? createFramebuffer();
+WebGLProgram? createProgram();
+WebGLRenderbuffer? createRenderbuffer();
+WebGLShader? createShader(GLenum type);
+WebGLShaderPrecisionFormat? getShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype);
+WebGLTexture? createTexture();
+WebGLUniformLocation? getUniformLocation(WebGLProgram? program, DOMString name);
+WindowProxy open(DOMString url, DOMString name, DOMString features, optional boolean replace = false);
+XPathExpression createExpression(DOMString expression, sequence<GLfloat> value);
+XPathNSResolver createNSResolver(Node? nodeResolver);
+XPathResult evaluate(DOMString expression, Node? contextNode, sequence<GLfloat> value);
