@@ -383,7 +383,7 @@
  - XPathExpression
  - XPathNSResolver
 
-# Fail in Chrome
+# Fail in Blink
 
  - AnalyserNode
  - AnimationEvent
